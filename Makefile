@@ -1,10 +1,8 @@
-.PHONY=all install configure
+.PHONY=all dependencies configuration
 
-all: install configure
+all: dependencies configuration
 
-install:
+dependencies:
 	brew bundle
-configure:
+configuration:
 	stow . --target="${HOME}"
-omarchy:
-	ln -nsf "${HOME}/.config/omarchy/current/theme/neovim.lua" "${HOME}/.config/nvim/lua/plugins/local/theme.lua"
