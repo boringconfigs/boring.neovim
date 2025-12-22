@@ -1,11 +1,11 @@
 return {
-  ["conform.nvim"] = "4993e07fac6679d0a5005aa7499e0bad2bd39f19",
-  ["fzf-lua"] = "9a0704e8af8f8442110ff22a83b5608366b235df",
-  ["mini.nvim"] = "72b0194c56c984476c5975b62eb340fd1aa1686a",
-  ["nvim-lspconfig"] = "f1237a8b3c243608a7116fa1ad216c441d7c2264",
-  ["nvim-treesitter"] = "c5871d9d870c866fea9f271f1a3b3f29049a4793",
-  ["nvim-treesitter-textobjects"] = "63c4dce4a56312ef1bdeafd16bdefa008fcc950a",
+  ["conform.nvim"] = "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25",
+  ["fzf-lua"] = "9d579feab4d3035627150e5e9b6e8fbf5e814ef6",
   ["gruvbox-material"] = "cc47341018320a2c82262958a1af889e5eeacd6e",
+  ["mini.nvim"] = "6170f606fbdb94bf461635c47962f61dceffe496",
+  ["nvim-lspconfig"] = "d20d83b3f24f5884da73a9fc92fdc47e778b8d0d",
+  ["nvim-treesitter"] = "6e42d823ce0a5a76180c473c119c7677738a09d1",
+  ["nvim-treesitter-textobjects"] = "e91c585ac0ee760198dabc1fad2e6227effdcd5e",
   ["omarchy-theme-loader.nvim"] = "e84f4150194cf4e1cc2c09958eda441b2bf30da3",
   ["vim-surround"] = "3d188ed2113431cf8dac77be61b842acb64433d9"
 }
