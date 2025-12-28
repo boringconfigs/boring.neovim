@@ -14,13 +14,16 @@ local language_servers = {
 	"pyright",
 }
 
-for _, server in ipairs(language_servers) do
-	vim.lsp.config(server, {
-		on_attach = function(client, bufnr)
-			vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
-		end,
-	})
-end
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("lsp-autocompletion", {}),
+	callback = function(args)
+		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+
+		if client:supports_method("textDocument/completion") then
+			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+		end
+	end,
+})
 
 vim.lsp.config("lua_ls", {
 	on_init = function(client)
