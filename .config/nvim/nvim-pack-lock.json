@@ -29,10 +29,6 @@
       "rev": "e84f4150194cf4e1cc2c09958eda441b2bf30da3",
       "src": "https://github.com/EskelinenAntti/omarchy-theme-loader.nvim"
     },
-    "vim-fugitive": {
-      "rev": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
-      "src": "https://github.com/tpope/vim-fugitive"
-    },
     "vim-surround": {
       "rev": "3d188ed2113431cf8dac77be61b842acb64433d9",
       "src": "https://github.com/tpope/vim-surround"

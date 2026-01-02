@@ -18,7 +18,6 @@ vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
-	"https://github.com/tpope/vim-fugitive",
 })
 
 require("plugins.treesitter")
