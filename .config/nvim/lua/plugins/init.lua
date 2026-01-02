@@ -1,7 +1,26 @@
-require("plugins.mini-deps")
+local hooks = function(ev)
+	local name, kind = ev.data.spec.name, ev.data.kind
+	if name == "nvim-treesitter" and (kind == "install" or kind == "update") then
+		if not ev.data.active then
+			vim.cmd.packadd("nvim-treesitter")
+		end
+		vim.cmd("TSUpdate")
+	end
+end
+vim.api.nvim_create_autocmd("PackChanged", { callback = hooks })
 
-local deps = require("mini.deps")
-deps.snap_load()
+vim.pack.add({
+	"https://github.com/sainnhe/gruvbox-material",
+	"https://github.com/stevearc/conform.nvim",
+	"https://github.com/tpope/vim-surround",
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/EskelinenAntti/omarchy-theme-loader.nvim",
+	"https://github.com/ibhagwan/fzf-lua",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
+	"https://github.com/tpope/vim-fugitive",
+})
+
 require("plugins.treesitter")
 require("plugins.lsp")
 require("plugins.formatter")
